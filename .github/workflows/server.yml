@@ -24,14 +24,7 @@ jobs:
           key: ${{ secrets.DROPLET_PRIVATE_KEY }}
           script_stop: true
           script: |
-            echo ${{ secrets.DROPLET_PRIVATE_KEY }}
-            export UPSTASH_REDIS_REST_URL=${{ secrets.UPSTASH_REDIS_REST_URL }}
-            export CORS_ORIGIN=${{ secrets.CORS_ORIGIN }}
-            cd chat-tutorial
-            cd server
-            git pull
-            down-compose down
-            docker-compose --project-name chat up -d --build 
+            whoami
 
 
 
